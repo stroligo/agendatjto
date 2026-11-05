@@ -1,0 +1,57 @@
+:root{--azul:#1a5a96;--link:#1b66c9;--bd:#ced4da}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:#212529;background:#fff;line-height:1.5}
+.topo{background:#0b4a7e url(../img/bg_tjto.jpg) top center/cover;color:#fff;height:64px}
+.barra{display:flex;align-items:center;height:64px;padding:0 12px;gap:16px}
+.logo{height:44px;width:auto;padding-right:16px;border-right:1px solid rgba(255,255,255,.7)}
+.tit{font-size:1.25rem;font-weight:400;margin:0}
+.menu{background:#f8f9fa;display:flex;gap:14px;padding:12px;font-size:.9rem}
+.menu a{color:#495057;text-decoration:none}.menu a:hover,.menu a.ativo{color:#000}
+.conteudo{max-width:1100px;margin:20px auto;padding:0 16px}
+#q{width:100%;padding:8px 10px;font-size:.95rem;border:1px solid var(--bd);border-radius:4px}
+.letras{display:flex;flex-wrap:nowrap;justify-content:space-between;gap:6px;margin:18px 0 30px}
+.letras button{flex:1 1 0;min-width:0;height:32px;padding:0;background:#fff;border:1px solid var(--link);color:var(--link);border-radius:4px;cursor:pointer;font-size:.9rem}
+.letras button:hover,.letras button.on{background:var(--link);color:#fff}
+.cols{display:flex;gap:28px;align-items:flex-start}
+#indice{flex:0 0 340px;max-width:100%}
+#painel{flex:1;min-width:0}
+.letra{border-left:4px solid var(--link);padding-left:9px;font-weight:700;margin:24px 0 6px;line-height:1}
+.letra:first-child{margin-top:0}
+.dep{display:block;color:var(--link);text-decoration:none;padding:1px 0 1px 13px;font-size:.92rem}
+.dep:hover{text-decoration:underline}.dep.sel{background:#2b6fd6;color:#fff}
+#painel h2{font-size:1.25rem;font-weight:400;margin:0 0 16px}
+.rapido{margin-bottom:14px;font-size:.92rem}.rapido a{color:var(--link)}
+.card{border-bottom:1px solid #e5e8eb;padding:10px 0;margin-bottom:6px}
+.card h3{margin:0 0 4px;font-size:1rem}
+.dep-nome{margin:0 0 4px;color:#6c757d;font-size:.82rem}
+.l{margin:2px 0;font-size:.9rem;word-break:break-word}.l b{font-weight:600}.l a{color:var(--link)}
+@media(max-width:760px){.cols{flex-direction:column}#indice{flex:none;width:100%}}
+.info{margin:4px 0;font-size:.9rem}
+@media(max-width:760px){.letras{flex-wrap:wrap}.letras button{flex:0 0 36px}}
+.fixo{position:sticky;top:0;z-index:20;background:#fff}
+.fixa{background:#fff;padding:12px 0 1px}
+.fixa .conteudo{margin:0 auto}
+.fixa .letras{margin:14px 0 12px}
+.letra{scroll-margin-top:calc(var(--alt,200px) + 12px)}
+.letras button:disabled{opacity:.35;cursor:default;background:#fff;color:var(--link)}
+html{scroll-behavior:smooth}
+.campo{position:relative}
+.campo .lupa{position:absolute;left:12px;top:50%;transform:translateY(-50%);color:#6c757d;pointer-events:none}
+.campo #q{padding-left:38px}
+.tab{width:100%;border-collapse:collapse;margin-top:20px;font-size:.92rem;table-layout:fixed}
+.tab th{text-align:left;padding:8px 10px;font-weight:700;border-bottom:2px solid var(--link);color:#212529}
+.tab td{padding:9px 10px;vertical-align:top;word-break:break-word}
+.tab th:nth-child(1){width:42%}.tab th:nth-child(2){width:30%}.tab th:nth-child(3){width:28%}
+.tab tbody tr:nth-child(odd){background:#f3f5f8}
+.tab td a{color:var(--link)}
+.info{margin:3px 0}
+@media(max-width:760px){.tab{table-layout:auto}}
+#indice{padding-bottom:calc(100vh - var(--alt,200px) - 40px)}
+@media(max-width:760px){#indice{padding-bottom:0}}
+.pular{position:absolute;left:8px;top:-60px;z-index:100;background:#fff;color:#0b3d75;padding:10px 14px;border-radius:4px;font-weight:600;transition:top .15s}
+.pular:focus{top:8px}
+:focus-visible{outline:3px solid #f5a623;outline-offset:2px}
+#painel h2:focus{outline:none}
+.menu a[aria-current]{font-weight:700;text-decoration:underline;text-underline-offset:4px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.pular{transition:none}}
+.letras .casa{display:flex;align-items:center;justify-content:center}
